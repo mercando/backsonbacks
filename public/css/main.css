@@ -17,9 +17,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 20px;
+	font-family: "source-sans-pro",sans-serif;
+  font-weight: 300;
+	font-size: 18px;
+	line-height: 150%;
 	color: #444444;
 }
 
@@ -29,6 +30,7 @@ h3 {
   line-height: 40px;
   font-weight: bold;
   margin-top: 17px;
+  font-family: "adelle",serif;
 }
 
 h1 {
@@ -43,7 +45,7 @@ h3 {
   font-size: 16px;
 }
 
-header {
+nav {
   top: 0;
   position: fixed;
   right: 0;
@@ -60,8 +62,6 @@ header {
   margin-right: auto;
   margin-left: auto;
   *zoom: 1;
-
-  background-color: #f8f8f8;
 }
 
 .container:before,
@@ -84,17 +84,101 @@ header {
 
 .span1 {
   width: 260px;
-  background-color: #777;
+}
+
+.span2 {
+  width: 550px;
 }
 
 .span3 {
   width: 610px;
-  background-color: #777;
 }
 
 .span4 {
   width: 1130px;
-  background-color: #666;
 }
 
+nav ul {
+  overflow: auto;
+  list-style-type: none;
+}
 
+nav li {
+  float: left;
+  margin-right: 0px;
+  padding: 40px 0px;
+  width: 20%;
+  text-align: center;
+  font-family: "adelle",serif;
+  font-size: 18px;
+}
+nav li a {
+  text-decoration: none;
+  color: #666;
+ 
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ 
+nav li a:hover {
+  color: #999;
+}
+
+nav li.logo {
+  background-image: url('../img/logo_50.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+section.hero {
+  background: url('../img/hero.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 300px;
+  padding-top: 100px;
+}
+
+section.juice {
+
+}
+
+section.store {
+  background-color: #84a931;
+}
+
+section.about {
+
+}
+
+section.connect {
+  background-color: #f8f8f8;
+}
+
+input {
+  display: block;
+  padding: 20px;
+  border: 0px solid #fff;
+  color: #333;
+  transition: all 0.3s ease-out;
+  margin: 20px 0px;
+  font-family: "source-sans-pro",sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  margin-top: 17px;
+}
