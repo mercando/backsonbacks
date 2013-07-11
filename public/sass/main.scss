@@ -1,0 +1,181 @@
+@import "reset";
+@import "mixins";
+@import "grid";
+
+body {
+	font-family: "source-sans-pro",sans-serif;
+	font-size: 18px;
+	line-height: 150%;
+	color: #444;
+}
+
+@font-face
+{
+font-family: picklefont;
+src: url('../font/icomoon.ttf'),
+     url('../font/icomoon.eot'); /* IE9 */
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "adelle",serif;
+}
+
+h1 {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+
+  background-color: #fff;
+  border-bottom: #eee 1px solid;
+}
+
+
+
+nav ul {
+  overflow: auto;
+  list-style-type: none;
+}
+
+nav li {
+  float: left;
+  margin-right: 0px;
+  padding: 40px 0px;
+  width: 20%;
+  text-align: center;
+  font-family: "adelle",serif;
+  font-size: 18px;
+}
+nav li a {
+  text-decoration: none;
+  color: #666;
+  @include transition();
+}
+ 
+nav li a:hover {
+  color: #999;
+}
+
+nav li.logo {
+  text-align: center;
+  font-family: "picklefont",serif;
+  font-size: 45px;
+  color: #84a931;
+}
+
+section {
+  padding: 80px;
+}
+
+section.hero {
+  background: url('../img/hero.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 300px;
+  padding-top: 100px;
+}
+
+section.juice {
+
+}
+
+section.store {
+  background-color: #84a931;
+}
+
+section.about {
+
+}
+
+section.connect {
+  background-color: #f8f8f8;
+}
+
+.txt {
+  padding: 20px;
+  border: 0px solid #fff;
+  color: #333;
+  margin: 20px 0px;
+  font-family: "source-sans-pro",sans-serif;
+  font-size: 22px;
+  height: 25px;
+  width: 450px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: .9
+}
+
+.txt:focus {
+  outline: none;
+  opacity: 1
+}
+
+.btn {
+  color: #fff;
+  background-color: #44700a;
+  width: 160px;
+  height: 65px;
+  border: none;
+  margin: 0px 0px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 18px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #385409;
+}
+
+#response {
+  margin-left: 15px;
+  font-size: 14px
+}
+
+.darkgreen {
+  color: #385409;
+}

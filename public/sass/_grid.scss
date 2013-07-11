@@ -1,0 +1,57 @@
+.container {
+  width: 1190px;
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+
+  &:before, &:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@media (min-width: 480px){
+  /*
+  Fluid Widths
+  */
+}
+
+@media (min-width: 768px){
+  
+}
+
+@media (min-width: 1190px){
+
+}
+
+[class*="span"] {
+  float: left;
+  margin-left: 30px;
+  margin-bottom: 17px;
+}
+
+.span1 {
+  width: 260px;
+}
+
+.span2 {
+  width: 550px;
+}
+
+.span3 {
+  width: 610px;
+}
+
+.span4 {
+  width: 1130px;
+}
+
+.row {
+  float: left;
+  margin-bottom: 17px;
+}

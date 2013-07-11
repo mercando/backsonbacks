@@ -1,5 +1,4 @@
 /* --- CSS Reset --- */
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, code,
@@ -13,22 +12,55 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-style: inherit;
   font-size: 100%;
   font-family: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
+
+.container {
+  width: 1190px;
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1; }
+  .container:before, .container:after {
+    display: table;
+    line-height: 0;
+    content: ""; }
+  .container:after {
+    clear: both; }
+
+@media (min-width: 480px) {
+  /*
+  Fluid Widths
+  */ }
+[class*="span"] {
+  float: left;
+  margin-left: 30px;
+  margin-bottom: 17px; }
+
+.span1 {
+  width: 260px; }
+
+.span2 {
+  width: 550px; }
+
+.span3 {
+  width: 610px; }
+
+.span4 {
+  width: 1130px; }
+
+.row {
+  float: left;
+  margin-bottom: 17px; }
 
 body {
-	font-family: "source-sans-pro",sans-serif;
-	font-size: 18px;
-	line-height: 150%;
-	color: #444;
-}
+  font-family: "source-sans-pro",sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+  color: #444; }
 
-@font-face
-{
-font-family: picklefont;
-src: url('../font/icomoon.ttf'),
-     url('../font/icomoon.eot'); /* IE9 */
-}
+@font-face {
+  font-family: picklefont;
+  src: url("../font/icomoon.ttf"), url("../font/icomoon.eot");
+  /* IE9 */ }
 
 h1,
 h2,
@@ -36,28 +68,23 @@ h3 {
   line-height: 40px;
   font-weight: bold;
   margin-bottom: 10px;
-  font-family: "adelle",serif;
-}
+  font-family: "adelle",serif; }
 
 h1 {
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 4px;
   word-spacing: 4px;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 h2 {
-  font-size: 19px;
-}
+  font-size: 19px; }
 
 h3 {
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 p {
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 nav {
   top: 0;
@@ -66,61 +93,12 @@ nav {
   left: 0;
   z-index: 1030;
   margin-bottom: 0;
-
   background-color: #fff;
-  border-bottom: #eee 1px solid;
-}
-
-.container {
-  width: 1190px;
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
-}
-
-.container:before,
-.container:after {
-  display: table;
-  line-height: 0;
-  content: "";
-}
-
-.container:after {
-  clear: both;
-}
-
-
-[class*="span"] {
-  float: left;
-  margin-left: 30px;
-  margin-bottom: 17px;
-}
-
-.span1 {
-  width: 260px;
-}
-
-.span2 {
-  width: 550px;
-}
-
-.span3 {
-  width: 610px;
-}
-
-.span4 {
-  width: 1130px;
-}
-
-.row {
-  float: left;
-  margin-bottom: 17px;
-}
+  border-bottom: #eee 1px solid; }
 
 nav ul {
   overflow: auto;
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 nav li {
   float: left;
@@ -129,59 +107,43 @@ nav li {
   width: 20%;
   text-align: center;
   font-family: "adelle",serif;
-  font-size: 18px;
-}
+  font-size: 18px; }
+
 nav li a {
   text-decoration: none;
   color: #666;
- 
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
- 
+  transition: all 0.5s ease; }
+
 nav li a:hover {
-  color: #999;
-}
+  color: #999; }
 
 nav li.logo {
   text-align: center;
   font-family: "picklefont",serif;
   font-size: 45px;
-  color: #84a931;
-}
+  color: #84a931; }
 
 section {
-  padding: 80px;
-}
+  padding: 80px; }
 
 section.hero {
-  background: url('../img/hero.jpg') no-repeat center center; 
+  background: url("../img/hero.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 300px;
-  padding-top: 100px;
-}
-
-section.juice {
-
-}
+  padding-top: 100px; }
 
 section.store {
-  background-color: #84a931;
-}
-
-section.about {
-
-}
+  background-color: #84a931; }
 
 section.connect {
-  background-color: #f8f8f8;
-}
+  background-color: #f8f8f8; }
 
 .txt {
   padding: 20px;
@@ -201,13 +163,11 @@ section.connect {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  opacity: .9
-}
+  opacity: 0.9; }
 
 .txt:focus {
   outline: none;
-  opacity: 1
-}
+  opacity: 1; }
 
 .btn {
   color: #fff;
@@ -227,18 +187,14 @@ section.connect {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
+  transition: all 0.3s ease; }
 
 .btn:hover {
-  background: #385409;
-}
+  background: #385409; }
 
 #response {
   margin-left: 15px;
-  font-size: 14px
-}
+  font-size: 14px; }
 
 .darkgreen {
-  color: #385409;
-}
+  color: #385409; }
