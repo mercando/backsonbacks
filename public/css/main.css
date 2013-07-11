@@ -18,10 +18,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
 	font-family: "source-sans-pro",sans-serif;
-  font-weight: 300;
 	font-size: 18px;
 	line-height: 150%;
-	color: #444444;
+	color: #444;
+}
+
+@font-face
+{
+font-family: picklefont;
+src: url('../font/icomoon.ttf'),
+     url('../font/icomoon.eot'); /* IE9 */
 }
 
 h1,
@@ -29,12 +35,16 @@ h2,
 h3 {
   line-height: 40px;
   font-weight: bold;
-  margin-top: 17px;
+  margin-bottom: 10px;
   font-family: "adelle",serif;
 }
 
 h1 {
   font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  margin-top: 10px;
 }
 
 h2 {
@@ -43,6 +53,10 @@ h2 {
 
 h3 {
   font-size: 16px;
+}
+
+p {
+  margin-bottom: 10px;
 }
 
 nav {
@@ -98,6 +112,11 @@ nav {
   width: 1130px;
 }
 
+.row {
+  float: left;
+  margin-bottom: 17px;
+}
+
 nav ul {
   overflow: auto;
   list-style-type: none;
@@ -128,13 +147,14 @@ nav li a:hover {
 }
 
 nav li.logo {
-  background-image: url('../img/logo_50.png');
-  background-position: center center;
-  background-repeat: no-repeat;
+  text-align: center;
+  font-family: "picklefont",serif;
+  font-size: 45px;
+  color: #84a931;
 }
 
 section {
-  margin-bottom: 50px;
+  padding: 80px;
 }
 
 section.hero {
@@ -163,22 +183,62 @@ section.connect {
   background-color: #f8f8f8;
 }
 
-input {
-  display: block;
+.txt {
   padding: 20px;
   border: 0px solid #fff;
   color: #333;
-  transition: all 0.3s ease-out;
   margin: 20px 0px;
   font-family: "source-sans-pro",sans-serif;
-  font-weight: 300;
-  font-size: 18px;
+  font-size: 22px;
+  height: 25px;
+  width: 450px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: .9
 }
 
-input:focus {
+.txt:focus {
   outline: none;
+  opacity: 1
 }
 
-img {
-  margin-top: 17px;
+.btn {
+  color: #fff;
+  background-color: #44700a;
+  width: 160px;
+  height: 65px;
+  border: none;
+  margin: 0px 0px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 18px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #385409;
+}
+
+#response {
+  margin-left: 15px;
+  font-size: 14px
+}
+
+.darkgreen {
+  color: #385409;
 }

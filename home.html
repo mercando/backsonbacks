@@ -14,7 +14,7 @@
       <ul>
         <li><a href="#">Juice</a></li>
         <li><a href="#">Store</a></li>
-        <li class="logo"></li>
+        <li class="logo">q</li>
         <li><a href="#">About</a></li>
         <li><a href="#">Connect</a></li>
       </ul>
@@ -29,43 +29,61 @@
 
   <section class="juice">
     <div class="container">
-      <div class="span2">
-        <img src="http://placehold.it/530x200/f8f8f8">
+      <div class="row">
+        <div class="span2">
+          <img src="public/img/ingredients.png">
+        </div>
+        <div class="span2">
+          <h1>Farm to Jar to Shot Glass</h1>
+          <p>
+            Bacon ipsum dolor sit amet turducken sausage pork loin kielbasa swine. Prosciutto cow spare ribs tri-tip. Bacon t-bone meatball, cow beef brisket salami. Strip steak bresaola biltong cow fatback meatball andouille frankfurter sausage tongue. Pork pork belly venison, shoulder short loin meatball ham hock. Brisket ham ham hock, capicola drumstick shoulder shank pork chop.
+          </p>
+        </div>
       </div>
-
-      <div class="span2">
-        <h1>Juice</h1>
-        <p>
-          Bacon ipsum dolor sit amet turducken sausage pork loin kielbasa swine. Prosciutto cow spare ribs tri-tip. Bacon t-bone meatball, cow beef brisket salami. Strip steak bresaola biltong cow fatback meatball andouille frankfurter sausage tongue. Pork pork belly venison, shoulder short loin meatball ham hock. Brisket ham ham hock, capicola drumstick shoulder shank pork chop.
-        </p>
+      <div class="row">
+        <div class="span2">
+          <h1>Made For Drinking</h1>
+          <p>
+            Bacon ipsum dolor sit amet turducken sausage pork loin kielbasa swine. Prosciutto cow spare ribs tri-tip. Bacon t-bone meatball, cow beef brisket salami. Strip steak bresaola biltong cow fatback meatball andouille frankfurter sausage tongue. Pork pork belly venison, shoulder short loin meatball ham hock. Brisket ham ham hock, capicola drumstick shoulder shank pork chop.
+          </p>
+        </div>
+        <div class="span2">
+          <img src="http://placekitten.com/g/550/300">
+        </div>
       </div>
-
-      <div class="span2">
-        <h1>Juice</h1>
-        <p>
-          Bacon ipsum dolor sit amet turducken sausage pork loin kielbasa swine. Prosciutto cow spare ribs tri-tip. Bacon t-bone meatball, cow beef brisket salami. Strip steak bresaola biltong cow fatback meatball andouille frankfurter sausage tongue. Pork pork belly venison, shoulder short loin meatball ham hock. Brisket ham ham hock, capicola drumstick shoulder shank pork chop.
-        </p>
-      </div>
-
-      <div class="span2">
-        <img src="http://placehold.it/530x200/f8f8f8">
-      </div>
-
     </div>
   </section>
 
   <section class="store">
     <div class="container">
       <div class="span2">
-        <img src="http://placehold.it/530x200/f8f8f8">
+        <img src="public/img/store.png">
       </div>
-      
+
       <div class="span2">
-        <h1>Coming Soon!</h1>
-        <p>
-          Bacon ipsum dolor sit amet turducken sausage pork loin kielbasa swine. Prosciutto cow spare ribs tri-tip. Bacon t-bone meatball, cow beef brisket salami. Strip steak bresaola biltong cow fatback meatball andouille frankfurter sausage tongue. 
+        <h1 class="darkgreen">Order Online</h1>
+        <p class="darkgreen">
+          We're hard at work trying to build our online store. It's not ready yet, but if you leave your email we'll let you know when you can start planning your inaugrual pickle party.
         </p>
-        <input type="text" placeholder="Input name">
+        
+
+
+        <form id="signup" action="<?=$_SERVER['PHP_SELF']; ?>" method="get">
+          <fieldset>
+            <input type="text" name="email" id="email" class="txt" placeholder="We'll need an email for that..."/>
+            <input type="submit" value="Let Me Know!" class="btn" />
+
+            <span id="response">
+              <? require_once('public/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
+            </span>
+          
+          </fieldset>
+        </form>      
+        <script type="text/javascript" src="public/js/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="public/js/mailing-list.js"></script>
+      
+
+
       </div>
 
     </div>
