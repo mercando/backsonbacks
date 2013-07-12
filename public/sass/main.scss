@@ -1,10 +1,13 @@
 @import "reset";
+@import "variables";
 @import "mixins";
 @import "grid";
 
 body {
-	font-family: "source-sans-pro",sans-serif;
-	font-size: 18px;
+	font: {
+		family: $san_serif;
+		size: 18px;
+	}
 	line-height: 150%;
 	color: #444;
 }
@@ -22,11 +25,11 @@ h3 {
 	line-height: 40px;
 	font-weight: bold;
 	margin-bottom: 10px;
-	font-family: "adelle",serif;
+	font-family: $serif;
 }
 
 h1 {
-	font-size: 22px;
+	font-size: $large;
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	word-spacing: 4px;
@@ -34,15 +37,19 @@ h1 {
 }
 
 h2 {
-	font-size: 19px;
+	font-size: $medium;
 }
 
 h3 {
-	font-size: 16px;
+	font-size: $small;
 }
 
 p {
 	margin-bottom: 10px;
+
+	&.darkgreen {
+		color: #385409;
+	}
 }
 
 nav {
@@ -54,6 +61,7 @@ nav {
 	margin-bottom: 0;
 	background-color: #fff;
 	border-bottom: #eee 1px solid;
+    padding: 0px 30px;
 
 	ul {
 		overflow: auto;
@@ -66,7 +74,7 @@ nav {
 		padding: 40px 0px;
 		width: 20%;
 		text-align: center;
-		font-family: "adelle",serif;
+		font-family: $serif;
 		font-size: 18px;
 		
 		a {
@@ -89,7 +97,7 @@ nav {
 }
 
 section {
-    padding: 80px 0px;
+    padding: 80px 30px;
     
     &.hero {
         background: url('../img/hero.jpg') no-repeat center center; 
@@ -104,7 +112,7 @@ section {
 
     }
     &.store {
-		background-color: #84a931;
+		background-color: $pickle_green;
 	}
 	&.connect {
 		background-color: #f8f8f8;
@@ -112,17 +120,20 @@ section {
 }
 
 .txt {
-	padding: 20px;
+	padding: 17px 20px;
 	border: 0px solid #fff;
 	color: #333;
 	margin: 20px 0px;
-	font-family: "source-sans-pro",sans-serif;
-	font-size: 22px;
-	height: 25px;
-	width: 450px;
+	width: 100%;
 	@include rounded_corner();
 	@include transition(all, 0.3s, ease);
+	@include box_sizing;
 	opacity: .9;
+
+	font: {
+		family: $san_serif;
+		size: $large;
+	}
 
 	&:focus {
 		outline: none;
@@ -132,7 +143,7 @@ section {
 
 .btn {
 	color: #fff;
-	background-color: #44700a;
+	background-color: $dark_pickle_green;
 	width: 160px;
 	height: 65px;
 	border: none;
@@ -144,16 +155,12 @@ section {
 	@include transition(all, 0.3s, ease);
 
 	&:hover {
-		background: #385409;
+		background: darken($dark_pickle_green, 5%);
 	}
 }
 
 
 #response {
 	margin-left: 15px;
-	font-size: 14px
-}
-
-.darkgreen {
-	color: #385409;
+	font-size: $small;
 }
