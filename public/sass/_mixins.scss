@@ -5,3 +5,10 @@
     -ms-transition: $property $duration $easing;
     transition: $property $duration $easing;
 }
+
+@mixin rounded_corner($radius: 5px) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -khtml-border-radius: $radius;
+    border-radius: $radius;
+}
