@@ -3,7 +3,7 @@
 <head>
   <title>Browses Prototype</title>
   <link href="public/css/main.css" media="all" rel="stylesheet" type="text/css" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="//use.typekit.net/whv3dvi.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
@@ -12,11 +12,11 @@
 	<nav>
     <div class="container">
       <ul>
-        <li><a href="#">Juice</a></li>
-        <li><a href="#">Store</a></li>
+        <li><a href="#" id="juice">Juice</a></li>
+        <li><a href="#" id="store">Store</a></li>
         <li class="logo">q</li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Connect</a></li>
+        <li><a href="#" id="about">About</a></li>
+        <li><a href="#" id="connect">Connect</a></li>
       </ul>
     </div>
   </nav>
@@ -24,10 +24,6 @@
   <section class="hero">
     <div class="container">
       <div class="span4"><h1>hero</h1></div>
-      <div class="span1"><h1>hero</h1></div>
-      <div class="span1"><h1>hero</h1></div>
-      <div class="span1"><h1>hero</h1></div>
-      <div class="span1"><h1>hero</h1></div>
     </div>
   </section>
 
@@ -83,7 +79,7 @@
           
           </fieldset>
         </form>      
-        <script type="text/javascript" src="public/js/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="public/js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="public/js/mailing-list.js"></script>
       
 
@@ -107,5 +103,20 @@
 
 	
   <footer>© Backs On Backs 2013</footer>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("nav a").click(function(){
+        var sectionName = $(this).attr("id");
+        console.log(sectionName);
 
+        var section = $("section." + sectionName).offset().top;
+        var navHeight = $("nav").outerHeight();
+        $("html,body").animate({
+          scrollTop: section-navHeight
+        }, 500);
+        return false;
+      });
+    });
+  </script>
 </body>
