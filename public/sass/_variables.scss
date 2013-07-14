@@ -1,5 +1,6 @@
 /* === COLOR === */
-$dark_grey: #444;
+$grey: #444;
+$light_grey: lighten($grey, 70%);
 $pickle_green: #84a931;
 $dark_pickle_green: #44700a;
 

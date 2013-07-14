@@ -60,8 +60,8 @@ nav {
 	z-index: 1030;
 	margin-bottom: 0;
 	background-color: #fff;
-	border-bottom: #eee 1px solid;
     padding: 0px 30px;
+    @include drop_shadow();
 
 	ul {
 		overflow: auto;
@@ -76,6 +76,7 @@ nav {
 		text-align: center;
 		font-family: $serif;
 		font-size: 18px;
+		@include transition(all, 0.2s, ease);
 		
 		a {
 			text-decoration: none;
@@ -85,6 +86,11 @@ nav {
 			&:hover {
 				color: #999;
 			}
+
+
+		}
+		&.active {
+			background-color: $light_grey;
 		}
 
 		&.logo {
