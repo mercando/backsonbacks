@@ -131,9 +131,16 @@ section {
         background: url('../img/hero.jpg') no-repeat center center; 
         @include background_cover();
         padding-top: 188px;
+        text-align: center;
 
+        img{
+        	max-width: 600px
+        }
+        .tagline {
+        	color: $white;
+        }
         .social {
-        	background-color: #fff;
+        	
         }
     }
     &.juice {

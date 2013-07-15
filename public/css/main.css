@@ -203,9 +203,12 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding-top: 188px; }
-    section.hero .social {
-      background-color: #fff; }
+    padding-top: 188px;
+    text-align: center; }
+    section.hero img {
+      max-width: 600px; }
+    section.hero .tagline {
+      color: white; }
   section.store {
     background-color: #84a931;
     color: #27320f; }
