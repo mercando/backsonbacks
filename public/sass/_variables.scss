@@ -1,8 +1,17 @@
 /* === COLOR === */
 $grey: #444;
-$light_grey: lighten($grey, 70%);
-$pickle_green: #84a931;
-$dark_pickle_green: #44700a;
+$grey-lightest: lighten($grey, 70%);
+$grey-lighter: lighten($grey, 50%);
+$grey-light: lighten($grey, 25%);
+
+$green: #84a931;
+$green-lightest: lighten($green, 75%);
+$green-lighter: lighten($green, 50%);
+$green-light: lighten($green, 25%);
+
+$green-darkest: darken($green, 40%);
+$green-darker: darken($green, 30%);
+$green-dark: darken($green, 15%);
 
 
 /* === TYPOGRAPHY === */

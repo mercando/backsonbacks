@@ -3,20 +3,17 @@
 @import "mixins";
 @import "grid";
 
-body {
-	font: {
-		family: $san_serif;
-		size: 18px;
-	}
-	line-height: 150%;
-	color: #444;
-}
-
-@font-face
-{
+@font-face {
 	font-family: picklefont;
 	src: url('../font/icomoon.ttf'),
 	     url('../font/icomoon.eot'); /* IE9 */
+}
+
+body {
+	font-family: $san_serif;
+	font-size: 18px;
+	line-height: 150%;
+	color: $grey;
 }
 
 h1,
@@ -46,10 +43,7 @@ h3 {
 
 p {
 	margin-bottom: 10px;
-
-	&.darkgreen {
-		color: #385409;
-	}
+	color: $grey-light;
 }
 
 nav {
@@ -80,25 +74,53 @@ nav {
 		
 		a {
 			text-decoration: none;
-			color: #666;
+			color: $grey;
 			@include transition();
 
 			&:hover {
-				color: #999;
+				color: $grey-light;
 			}
 
 
 		}
 		&.active {
-			background-color: $light_grey;
+			font-weight: 800;
+			text-decoration: underline;
+			
 		}
 
 		&.logo {
 			text-align: center;
 			font-family: "picklefont",serif;
 			font-size: 45px;
-			color: #84a931;
+			color: $green;
 		}
+	}
+}
+
+footer {
+	padding: 80px 30px;
+	text-align: center;
+	a {
+		text-align: center;
+		font-family: "picklefont",serif;
+		font-size: 45px;
+		color: $grey-light;
+		text-decoration: none;
+		@include transition();
+
+		&:hover {
+			color: $grey-lighter;
+		}
+
+	}
+
+	.social {
+		word-spacing: 20px;
+	}
+
+	.copyright {
+		color: $grey-lighter;
 	}
 }
 
@@ -107,21 +129,41 @@ section {
     
     &.hero {
         background: url('../img/hero.jpg') no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height: 300px;
-        padding-top: 100px;
+        @include background_cover();
+        padding-top: 188px;
+
+        .social {
+        	background-color: #fff;
+        }
     }
     &.juice {
 
     }
     &.store {
-		background-color: $pickle_green;
+		background-color: $green;
+		color: $green-darker;
+
+		p {
+			color: $green-darker;
+		}
 	}
+	
+	&.about {
+		h2 {
+			text-align: center;
+		}
+
+		p.user_info {
+			text-align: center;
+		}
+	}
+
 	&.connect {
-		background-color: #f8f8f8;
+		background-color: $grey-lightest;
+
+		iframe{
+			width: 100%;
+		}
 	}
 }
 
@@ -149,7 +191,7 @@ section {
 
 .btn {
 	color: #fff;
-	background-color: $dark_pickle_green;
+	background-color: $green-dark;
 	width: 160px;
 	height: 65px;
 	border: none;
@@ -161,7 +203,7 @@ section {
 	@include transition(all, 0.3s, ease);
 
 	&:hover {
-		background: darken($dark_pickle_green, 5%);
+		background-color: $green-darker;
 	}
 }
 

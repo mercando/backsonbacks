@@ -51,6 +51,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   .span4 {
     width: 100%; }
 
+  .span5 {
+    width: 33.33333333333333%; }
+
   .row {
     float: left;
     margin-bottom: 17px; }
@@ -88,16 +91,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
   img {
     width: 100%; } }
-body {
-  font-family: "source-sans-pro", sans-serif;
-  font-size: 18px;
-  line-height: 150%;
-  color: #444; }
-
 @font-face {
   font-family: picklefont;
   src: url("../font/icomoon.ttf"), url("../font/icomoon.eot");
   /* IE9 */ }
+
+body {
+  font-family: "source-sans-pro", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+  color: #444444; }
 
 h1,
 h2,
@@ -121,9 +124,8 @@ h3 {
   font-size: 14px; }
 
 p {
-  margin-bottom: 10px; }
-  p.darkgreen {
-    color: #385409; }
+  margin-bottom: 10px;
+  color: #848484; }
 
 nav {
   top: 0;
@@ -155,21 +157,43 @@ nav {
     transition: all 0.2s ease; }
     nav li a {
       text-decoration: none;
-      color: #666;
+      color: #444444;
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       -ms-transition: all 0.5s ease;
       transition: all 0.5s ease; }
       nav li a:hover {
-        color: #999; }
+        color: #848484; }
     nav li.active {
-      background-color: #f7f7f7; }
+      font-weight: 800;
+      text-decoration: underline; }
     nav li.logo {
       text-align: center;
       font-family: "picklefont",serif;
       font-size: 45px;
       color: #84a931; }
+
+footer {
+  padding: 80px 30px;
+  text-align: center; }
+  footer a {
+    text-align: center;
+    font-family: "picklefont",serif;
+    font-size: 45px;
+    color: #848484;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    footer a:hover {
+      color: #c4c4c4; }
+  footer .social {
+    word-spacing: 20px; }
+  footer .copyright {
+    color: #c4c4c4; }
 
 section {
   padding: 80px 30px; }
@@ -179,12 +203,22 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 300px;
-    padding-top: 100px; }
+    padding-top: 188px; }
+    section.hero .social {
+      background-color: #fff; }
   section.store {
-    background-color: #84a931; }
+    background-color: #84a931;
+    color: #27320f; }
+    section.store p {
+      color: #27320f; }
+  section.about h2 {
+    text-align: center; }
+  section.about p.user_info {
+    text-align: center; }
   section.connect {
-    background-color: #f8f8f8; }
+    background-color: #f7f7f7; }
+    section.connect iframe {
+      width: 100%; }
 
 .txt {
   padding: 17px 20px;
@@ -214,7 +248,7 @@ section {
 
 .btn {
   color: #fff;
-  background-color: #44700a;
+  background-color: #566e20;
   width: 160px;
   height: 65px;
   border: none;
@@ -232,7 +266,7 @@ section {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .btn:hover {
-    background: #365908; }
+    background-color: #27320f; }
 
 #response {
   margin-left: 15px;

@@ -14,7 +14,7 @@
       <ul>
         <li><a href="#" id="juice">Juice</a></li>
         <li><a href="#" id="store">Store</a></li>
-        <li class="logo">q</li>
+        <li class="logo">1</li>
         <li><a href="#" id="about">About</a></li>
         <li><a href="#" id="connect">Connect</a></li>
       </ul>
@@ -23,7 +23,8 @@
 
   <section class="hero">
     <div class="container">
-      <div class="span4"><h1>hero</h1></div>
+      <div class="span3"><h1>hero</h1></div>
+      <div class="span1 social"><div class="fb-like" data-href="http://facebook.com/backsonbacks" data-send="false" data-layout="box_count" data-width="200" data-show-faces="false"></div></div>
     </div>
   </section>
 
@@ -66,8 +67,6 @@
           We're hard at work trying to build our online store. It's not ready yet, but if you leave your email we'll let you know when you can start planning your inaugrual pickle party.
         </p>
         
-
-
         <form id="signup" action="<?=$_SERVER['PHP_SELF']; ?>" method="get">
           <fieldset>
             <input type="text" name="email" id="email" class="txt" placeholder="We'll need an email for that..."/>
@@ -91,18 +90,49 @@
 
   <section class="about">
     <div class="container">
-      <div class="span4"><h1>About</h1></div>
+      <div class="span4">
+        <h1>Our Team</h1>
+        <p>
+          Bacon ipsum dolor sit amet turducken sausage pork loin kielbasa swine. Prosciutto cow spare ribs tri-tip. Bacon t-bone meatball, cow beef brisket salami. Strip steak bresaola biltong cow fatback meatball andouille frankfurter sausage tongue. Pork pork belly venison, shoulder short loin meatball ham hock. Brisket ham ham hock, capicola drumstick shoulder shank pork chop.
+        </p>
+      </div>
+      <div class="span5">
+        <img src="public/img/avatar.png">
+        <h2>Andy Merc</h2>
+        <p class="user_info">Co-Founder</p>
+        <p class="user_info"><a href="#">@merc</a></p>
+      </div>
+      <div class="span5">
+        <img src="public/img/avatar.png">
+        <h2>Andy Merc</h2>
+        <p class="user_info">Co-Founder</p>
+        <p class="user_info"><a href="#">@merc</a></p>
+      </div>
+      <div class="span5">
+        <img src="public/img/avatar.png">
+        <h2>Andy Merc</h2>
+        <p class="user_info">Co-Founder</p>
+        <p class="user_info"><a href="#">@merc</a></p>
+      </div>
     </div>
   </section>
 
   <section class="connect">
     <div class="container">
       <div class="span4"><h1>Connect</h1></div>
+      <div class="span2">
+        <iframe src="http://snapwidget.com/sl/?u=YmFja3NvbmJhY2tzfGlufDUwMHwyfDN8fHllc3w1fG5vbmU=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; height: 515px" ></iframe>
+      </div>
     </div>
   </section>
 
 	
-  <footer>© Backs On Backs 2013</footer>
+  <footer>
+    <div class="container">
+      <div class="span4 social"><a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a></div>
+      <div class="span4 copyright">&copy; Backs On Backs 2013</div>
+    </div>
+  </footer>
   
   <script type="text/javascript">
     $(document).ready(function(){
@@ -153,3 +183,12 @@
 
   </script>
 </body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=284785934867108";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
