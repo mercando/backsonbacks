@@ -16,6 +16,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 /* === COLOR === */
 /* === TYPOGRAPHY === */
+@font-face {
+  font-family: picklefont;
+  src: url("../font/icomoon.ttf"), url("../font/icomoon.eot");
+  /* IE9 */ }
+
 @media (min-width: 769px) {
   .container {
     width: 100%;
@@ -58,8 +63,56 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     float: left;
     margin-bottom: 17px; }
 
-  img {
-    width: 100%; } }
+  object {
+    width: 100%; }
+
+  nav {
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 0;
+    background-color: white;
+    padding: 0px 30px;
+    -moz-box-shadow: 0 1px 1px #ddd;
+    -webkit-box-shadow: 0 1px 1px #ddd;
+    box-shadow: 0 1px 1px #ddd; }
+    nav ul {
+      overflow: auto;
+      list-style-type: none; }
+    nav li {
+      float: left;
+      margin-right: 0px;
+      padding: 40px 0px;
+      width: 20%;
+      text-align: center;
+      font-family: "adelle", serif;
+      font-size: 18px;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+      nav li a {
+        text-decoration: none;
+        color: #444444;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        nav li a:hover {
+          color: #444444;
+          text-decoration: underline; }
+      nav li.active {
+        font-weight: 800;
+        text-decoration: underline; }
+      nav li.logo {
+        text-align: center;
+        font-family: "picklefont", serif;
+        font-size: 45px;
+        color: #84a931; } }
 @media (max-width: 768px) {
   /*
   Fluid Widths
@@ -89,13 +142,56 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     float: left;
     margin-bottom: 17px; }
 
-  img {
-    width: 100%; } }
-@font-face {
-  font-family: picklefont;
-  src: url("../font/icomoon.ttf"), url("../font/icomoon.eot");
-  /* IE9 */ }
+  object {
+    width: 100%; }
 
+  nav {
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 0;
+    background-color: white;
+    padding: 0px 30px;
+    -moz-box-shadow: 0 1px 1px #ddd;
+    -webkit-box-shadow: 0 1px 1px #ddd;
+    box-shadow: 0 1px 1px #ddd; }
+    nav ul {
+      overflow: auto;
+      list-style-type: none; }
+    nav li {
+      float: left;
+      margin-right: 0px;
+      padding: 25px 0px;
+      width: 20%;
+      text-align: center;
+      font-family: "adelle", serif;
+      font-size: 14px;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+      nav li a {
+        text-decoration: none;
+        color: #444444;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        nav li a:hover {
+          color: #444444;
+          text-decoration: underline; }
+      nav li.active {
+        font-weight: 800;
+        text-decoration: underline; }
+      nav li.logo {
+        text-align: center;
+        font-family: "picklefont", serif;
+        font-size: 30px;
+        color: #84a931; } }
 body {
   font-family: "source-sans-pro", sans-serif;
   font-size: 18px;
@@ -127,77 +223,42 @@ p {
   margin-bottom: 10px;
   color: #848484; }
 
-nav {
-  top: 0;
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  margin-bottom: 0;
-  background-color: #fff;
-  padding: 0px 30px;
-  -moz-box-shadow: 0 1px 1px #ddd;
-  -webkit-box-shadow: 0 1px 1px #ddd;
-  box-shadow: 0 1px 1px #ddd; }
-  nav ul {
-    overflow: auto;
-    list-style-type: none; }
-  nav li {
-    float: left;
-    margin-right: 0px;
-    padding: 40px 0px;
-    width: 20%;
-    text-align: center;
-    font-family: "adelle", serif;
-    font-size: 18px;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
-    nav li a {
-      text-decoration: none;
-      color: #444444;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-      nav li a:hover {
-        color: #848484; }
-    nav li.active {
-      font-weight: 800;
-      text-decoration: underline; }
-    nav li.logo {
-      text-align: center;
-      font-family: "picklefont",serif;
-      font-size: 45px;
-      color: #84a931; }
+a {
+  text-align: center;
+  color: #84a931;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  a:hover {
+    color: #beda7f; }
 
 footer {
   padding: 80px 30px;
   text-align: center; }
   footer a {
     text-align: center;
-    font-family: "picklefont",serif;
+    font-family: "picklefont", serif;
     font-size: 45px;
     color: #848484;
     text-decoration: none;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     footer a:hover {
       color: #c4c4c4; }
   footer .social {
-    word-spacing: 20px; }
+    word-spacing: 15px; }
   footer .copyright {
     color: #c4c4c4; }
 
 section {
-  padding: 80px 30px; }
-  section.hero {
+  padding: 60px 30px; }
+  section.top {
     background: url("../img/hero.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -205,27 +266,27 @@ section {
     background-size: cover;
     padding-top: 188px;
     text-align: center; }
-    section.hero img {
-      max-width: 600px; }
-    section.hero .tagline {
+    section.top object {
+      max-width: 700px; }
+    section.top p {
       color: white; }
   section.store {
     background-color: #84a931;
     color: #27320f; }
     section.store p {
       color: #27320f; }
+  section.about object {
+    width: 100%; }
   section.about h2 {
     text-align: center; }
   section.about p.user_info {
     text-align: center; }
   section.connect {
     background-color: #f7f7f7; }
-    section.connect iframe {
-      width: 100%; }
 
-.txt {
+input {
   padding: 17px 20px;
-  border: 0px solid #fff;
+  border: 0px solid white;
   color: #333;
   margin: 20px 0px;
   width: 100%;
@@ -245,31 +306,31 @@ section {
   opacity: .9;
   font-family: "source-sans-pro", sans-serif;
   font-size: 22px; }
-  .txt:focus {
+  input.btn {
+    color: white;
+    background-color: #566e20;
+    width: 160px;
+    height: 65px;
+    border: none;
+    margin: 0px 0px;
+    cursor: pointer;
+    padding: 0;
+    font-size: 18px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-appearance: none; }
+    input.btn:hover {
+      background-color: #27320f; }
+  input:focus {
     outline: none;
     opacity: 1; }
-
-.btn {
-  color: #fff;
-  background-color: #566e20;
-  width: 160px;
-  height: 65px;
-  border: none;
-  margin: 0px 0px;
-  cursor: pointer;
-  padding: 0;
-  font-size: 18px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-  .btn:hover {
-    background-color: #27320f; }
 
 #response {
   margin-left: 15px;

@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-  <title>Browses Prototype</title>
+  <title>Backs On Backs</title>
   <link href="public/css/main.css" media="all" rel="stylesheet" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="//use.typekit.net/whv3dvi.js"></script>
@@ -11,6 +11,7 @@
 <body>
 	<nav>
     <div class="container">
+    
       <ul>
         <li><a href="#" id="juice">Juice</a></li>
         <li><a href="#" id="store">Store</a></li>
@@ -18,27 +19,44 @@
         <li><a href="#" id="about">About</a></li>
         <li><a href="#" id="connect">Connect</a></li>
       </ul>
+    
     </div>
   </nav>
 
-  <section class="hero">
+  <section class="top">
     <div class="container">
+      
       <div class="span4">
-        <img src="public/img/logo_2.png">
-    </div>
-      <div class="span4 tagline">
-        <span class="">Hand-crafted pickel juice. Made in NYC.</span>
+        <object data="public/img/logo_2.svg" type="image/svg+xml" class="logo">
+          <!--[if lte IE 8 ]-->
+            <img src="public/img/logo_2.png">
+          <!--![endif]-->
+        </object>  
       </div>
-      <div class="span4 social"><div class="fb-like" data-href="http://facebook.com/backsonbacks" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div></div>
+      
+      <div class="span4">
+        <p>Hand-crafted pickel juice. Made in NYC.</p>
+      </div>
+      
+      <div class="span4">
+        <div class="fb-like" data-href="http://facebook.com/backsonbacks" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+      </div>
+    
     </div>
   </section>
 
   <section class="juice">
     <div class="container">
       <div class="row">
+    
         <div class="span2">
-          <img src="public/img/ingredients.png">
+          <object data="public/img/veggies.svg" type="image/svg+xml" class="logo">
+            <!--[if lte IE 8 ]-->
+              <img src="public/img/veggies.png">
+            <!--![endif]-->
+          </object>
         </div>
+    
         <div class="span2">
           <h1>Farm to Jar to Shot Glass</h1>
           <p>
@@ -46,10 +64,17 @@
           </p>
         </div>
       </div>
+    
       <div class="row">
+    
         <div class="span2">
-          <img src="http://placekitten.com/g/550/300">
+          <object data="public/img/shots.svg" type="image/svg+xml" class="logo">
+            <!--[if lte IE 8 ]-->
+              <img src="public/img/shots.png">
+            <!--![endif]-->
+          </object>
         </div>
+    
         <div class="span2">
           <h1>Made For Drinking</h1>
           <p>
@@ -57,85 +82,108 @@
           </p>
         </div>
       </div>
+    
     </div>
   </section>
 
   <section class="store">
     <div class="container">
+    
       <div class="span2">
-        <img src="public/img/store.png">
+        <object data="public/img/store.svg" type="image/svg+xml" class="logo">
+            <!--[if lte IE 8 ]-->
+              <img src="public/img/store.png">
+            <!--![endif]-->
+          </object>
       </div>
-
+    
       <div class="span2">
         <h1 class="darkgreen">Order Online</h1>
         <p class="darkgreen">
           We're hard at work trying to build our online store. It's not ready yet, but if you leave your email we'll let you know when you can start planning your inaugrual pickle party.
         </p>
-        
         <form id="signup" action="<?=$_SERVER['PHP_SELF']; ?>" method="get">
           <fieldset>
             <input type="text" name="email" id="email" class="txt" placeholder="We'll need an email for that..."/>
             <input type="submit" value="Let Me Know!" class="btn" />
-
             <span id="response">
               <? require_once('public/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
             </span>
-          
           </fieldset>
         </form>      
         <script type="text/javascript" src="public/js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="public/js/mailing-list.js"></script>
-      
-
-
       </div>
-
+    
     </div>
   </section>
 
   <section class="about">
     <div class="container">
+      
       <div class="span4">
         <h1>Our Team</h1>
         <p>
           Bacon ipsum dolor sit amet turducken sausage pork loin kielbasa swine. Prosciutto cow spare ribs tri-tip. Bacon t-bone meatball, cow beef brisket salami. Strip steak bresaola biltong cow fatback meatball andouille frankfurter sausage tongue. Pork pork belly venison, shoulder short loin meatball ham hock. Brisket ham ham hock, capicola drumstick shoulder shank pork chop.
         </p>
       </div>
+      
       <div class="span5">
-        <img src="public/img/avatar.png">
-        <h2>Andy Merc</h2>
+        <object data="public/img/avatar-01.svg" type="image/svg+xml" class="avatar">
+            <!--[if lte IE 8 ]-->
+              <img src="public/img/avatar-01.png">
+            <!--![endif]-->
+          </object>
+        <h2>Eric Ma</h2>
+        <p class="user_info">Co-Founder</p>
+        <p class="user_info"><a href="#">@erma</a></p>
+      </div>
+      
+      <div class="span5">
+        <object data="public/img/avatar-02.svg" type="image/svg+xml" class="avatar">
+            <!--[if lte IE 8 ]-->
+              <img src="public/img/avatar-02.png">
+            <!--![endif]-->
+          </object>
+        <h2>Andrew Mercando</h2>
         <p class="user_info">Co-Founder</p>
         <p class="user_info"><a href="#">@merc</a></p>
       </div>
+      
       <div class="span5">
-        <img src="public/img/avatar.png">
-        <h2>Andy Merc</h2>
+        <object data="public/img/avatar-03.svg" type="image/svg+xml" class="avatar">
+          <!--[if lte IE 8 ]-->
+            <img src="public/img/avatar-03.png">
+          <!--![endif]-->
+        </object>
+        <h2>Abigail Besdin</h2>
         <p class="user_info">Co-Founder</p>
-        <p class="user_info"><a href="#">@merc</a></p>
+        <p class="user_info"><a href="#">@abigailbesdin</a></p>
       </div>
-      <div class="span5">
-        <img src="public/img/avatar.png">
-        <h2>Andy Merc</h2>
-        <p class="user_info">Co-Founder</p>
-        <p class="user_info"><a href="#">@merc</a></p>
-      </div>
+    
     </div>
   </section>
 
   <section class="connect">
     <div class="container">
+      
       <div class="span4"><h1>Connect</h1></div>
+      
       <div class="span2">
         <iframe src="http://snapwidget.com/sl/?u=YmFja3NvbmJhY2tzfGlufDUwMHwyfDN8fHllc3w1fG5vbmU=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; height: 515px" ></iframe>
       </div>
+    
     </div>
   </section>
 
 	
   <footer>
     <div class="container">
+      
       <div class="span4 social"><a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a></div>
+      
       <div class="span4 copyright">&copy; Backs On Backs 2013</div>
+    
     </div>
   </footer>
   

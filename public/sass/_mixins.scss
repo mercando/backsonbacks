@@ -1,4 +1,4 @@
-@mixin transition($property: all, $duration: 0.5s, $easing: ease) {
+@mixin transition($property: all, $duration: 0.3s, $easing: ease) {
     -webkit-transition: $property $duration $easing;
     -moz-transition: $property $duration $easing;
     -o-transition: $property $duration $easing;
@@ -31,4 +31,59 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+@mixin navigation($type-size: $medium, $padding: 40px, $logo-size: $logo) {
+    nav {
+        top: 0;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        margin-bottom: 0;
+        background-color: $white;
+        padding: 0px 30px;
+        @include drop_shadow();
+
+        ul {
+            overflow: auto;
+            list-style-type: none;
+        }
+
+        li {
+            float: left;
+            margin-right: 0px;
+            padding: $padding 0px;
+            width: 20%;
+            text-align: center;
+            font-family: $serif;
+            font-size: $type-size;
+            @include transition(all, 0.2s, ease);
+            
+            a {
+                text-decoration: none;
+                color: $grey;
+                @include transition();
+
+                &:hover {
+                    color: $grey;
+                    text-decoration: underline;
+                }
+
+            }
+            
+            &.active {
+                font-weight: 800;
+                text-decoration: underline;
+                
+            }
+
+            &.logo {
+                text-align: center;
+                font-family: $pickle-font;
+                font-size: $logo-size;
+                color: $green;
+            }
+        }
+    }
 }

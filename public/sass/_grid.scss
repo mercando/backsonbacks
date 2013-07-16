@@ -48,9 +48,11 @@
         float: left;
         margin-bottom: 17px;
     }
-    img {
+    object {
         width: 100%;
-    }  
+    }
+
+    @include navigation();  
 }
 
 
@@ -88,9 +90,11 @@
         margin-bottom: 17px;
     }
 
-    img {
+    object {
         width: 100%;
     }  
+
+    @include navigation($small, 25px, $logo-small);  
 }
 
 

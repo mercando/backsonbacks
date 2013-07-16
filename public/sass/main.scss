@@ -3,15 +3,9 @@
 @import "mixins";
 @import "grid";
 
-@font-face {
-	font-family: picklefont;
-	src: url('../font/icomoon.ttf'),
-	     url('../font/icomoon.eot'); /* IE9 */
-}
-
 body {
-	font-family: $san_serif;
-	font-size: 18px;
+	font-family: $san-serif;
+	font-size: $medium;
 	line-height: 150%;
 	color: $grey;
 }
@@ -46,77 +40,37 @@ p {
 	color: $grey-light;
 }
 
-nav {
-	top: 0;
-	position: fixed;
-	right: 0;
-	left: 0;
-	z-index: 1030;
-	margin-bottom: 0;
-	background-color: #fff;
-    padding: 0px 30px;
-    @include drop_shadow();
-
-	ul {
-		overflow: auto;
-		list-style-type: none;
+a {
+	text-align: center;
+	color: $green;
+	text-decoration: none;
+	@include transition();
+	
+	&:hover {
+		color: $green-light;
 	}
 
-	li {
-		float: left;
-		margin-right: 0px;
-		padding: 40px 0px;
-		width: 20%;
-		text-align: center;
-		font-family: $serif;
-		font-size: 18px;
-		@include transition(all, 0.2s, ease);
-		
-		a {
-			text-decoration: none;
-			color: $grey;
-			@include transition();
-
-			&:hover {
-				color: $grey-light;
-			}
-
-
-		}
-		&.active {
-			font-weight: 800;
-			text-decoration: underline;
-			
-		}
-
-		&.logo {
-			text-align: center;
-			font-family: "picklefont",serif;
-			font-size: 45px;
-			color: $green;
-		}
-	}
 }
 
 footer {
 	padding: 80px 30px;
 	text-align: center;
+	
 	a {
 		text-align: center;
-		font-family: "picklefont",serif;
-		font-size: 45px;
+		font-family: $pickle-font;
+		font-size: $logo;
 		color: $grey-light;
 		text-decoration: none;
 		@include transition();
-
+		
 		&:hover {
 			color: $grey-lighter;
 		}
-
 	}
 
 	.social {
-		word-spacing: 20px;
+		word-spacing: 15px;
 	}
 
 	.copyright {
@@ -125,27 +79,27 @@ footer {
 }
 
 section {
-    padding: 80px 30px;
+    padding: 60px 30px;
     
-    &.hero {
+    &.top {
         background: url('../img/hero.jpg') no-repeat center center; 
         @include background_cover();
         padding-top: 188px;
         text-align: center;
 
-        img{
-        	max-width: 600px
+        object {
+        	max-width: 700px;
         }
-        .tagline {
+        
+        p {
         	color: $white;
         }
-        .social {
-        	
-        }
     }
+    
     &.juice {
 
     }
+
     &.store {
 		background-color: $green;
 		color: $green-darker;
@@ -156,6 +110,9 @@ section {
 	}
 	
 	&.about {
+		object{
+			width: 100%;
+		}
 		h2 {
 			text-align: center;
 		}
@@ -168,15 +125,13 @@ section {
 	&.connect {
 		background-color: $grey-lightest;
 
-		iframe{
-			width: 100%;
-		}
+		
 	}
 }
 
-.txt {
+input {
 	padding: 17px 20px;
-	border: 0px solid #fff;
+	border: 0px solid $white;
 	color: #333;
 	margin: 20px 0px;
 	width: 100%;
@@ -184,10 +139,26 @@ section {
 	@include transition(all, 0.3s, ease);
 	@include box_sizing;
 	opacity: .9;
+	font-family: $san_serif;
+	font-size: $large;
 
-	font: {
-		family: $san_serif;
-		size: $large;
+	&.btn {
+		color: $white;
+		background-color: $green-dark;
+		width: 160px;
+		height: 65px;
+		border: none;
+		margin: 0px 0px;
+		cursor: pointer;
+		padding: 0;
+		font-size: $medium;
+		@include rounded_corner();
+		@include transition(all, 0.3s, ease);
+		-webkit-appearance: none;
+
+		&:hover {
+			background-color: $green-darker;
+		}
 	}
 
 	&:focus {
@@ -196,23 +167,7 @@ section {
 	}
 }
 
-.btn {
-	color: #fff;
-	background-color: $green-dark;
-	width: 160px;
-	height: 65px;
-	border: none;
-	margin: 0px 0px;
-	cursor: pointer;
-	padding: 0;
-	font-size: 18px;
-	@include rounded_corner();
-	@include transition(all, 0.3s, ease);
 
-	&:hover {
-		background-color: $green-darker;
-	}
-}
 
 
 #response {
