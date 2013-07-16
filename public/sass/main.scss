@@ -69,17 +69,13 @@ footer {
 		}
 	}
 
-	.social {
-		word-spacing: 15px;
-	}
-
 	.copyright {
 		color: $grey-lighter;
 	}
 }
 
 section {
-    padding: 60px 30px;
+    padding: 60px 0px;
     
     &.top {
         background: url('../img/hero.jpg') no-repeat center center; 
@@ -138,7 +134,7 @@ input {
 	@include rounded_corner();
 	@include transition(all, 0.3s, ease);
 	@include box_sizing;
-	opacity: .9;
+	background-color: $grey-lightest;
 	font-family: $san_serif;
 	font-size: $large;
 
@@ -163,7 +159,7 @@ input {
 
 	&:focus {
 		outline: none;
-		opacity: 1;
+		background-color: $white;
 	}
 }
 

@@ -74,7 +74,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     z-index: 1030;
     margin-bottom: 0;
     background-color: white;
-    padding: 0px 30px;
+    padding: 0px 00px;
     -moz-box-shadow: 0 1px 1px #ddd;
     -webkit-box-shadow: 0 1px 1px #ddd;
     box-shadow: 0 1px 1px #ddd; }
@@ -84,7 +84,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     nav li {
       float: left;
       margin-right: 0px;
-      padding: 40px 0px;
+      padding: 30px 0px;
       width: 20%;
       text-align: center;
       font-family: "adelle", serif;
@@ -133,6 +133,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     float: left;
     margin-bottom: 17px;
     width: 100%;
+    padding: 0% 5%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -153,7 +154,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     z-index: 1030;
     margin-bottom: 0;
     background-color: white;
-    padding: 0px 30px;
+    padding: 0px 00px;
     -moz-box-shadow: 0 1px 1px #ddd;
     -webkit-box-shadow: 0 1px 1px #ddd;
     box-shadow: 0 1px 1px #ddd; }
@@ -163,11 +164,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     nav li {
       float: left;
       margin-right: 0px;
-      padding: 25px 0px;
+      padding: 30px 0px;
       width: 20%;
       text-align: center;
       font-family: "adelle", serif;
-      font-size: 14px;
+      font-size: 13px;
       -webkit-transition: all 0.2s ease;
       -moz-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;
@@ -217,7 +218,7 @@ h2 {
   font-size: 18px; }
 
 h3 {
-  font-size: 14px; }
+  font-size: 13px; }
 
 p {
   margin-bottom: 10px;
@@ -251,13 +252,11 @@ footer {
     transition: all 0.3s ease; }
     footer a:hover {
       color: #c4c4c4; }
-  footer .social {
-    word-spacing: 15px; }
   footer .copyright {
     color: #c4c4c4; }
 
 section {
-  padding: 60px 30px; }
+  padding: 60px 0px; }
   section.top {
     background: url("../img/hero.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -303,7 +302,7 @@ input {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  opacity: .9;
+  background-color: #f7f7f7;
   font-family: "source-sans-pro", sans-serif;
   font-size: 22px; }
   input.btn {
@@ -330,8 +329,8 @@ input {
       background-color: #27320f; }
   input:focus {
     outline: none;
-    opacity: 1; }
+    background-color: white; }
 
 #response {
   margin-left: 15px;
-  font-size: 14px; }
+  font-size: 13px; }

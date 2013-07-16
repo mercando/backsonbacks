@@ -82,6 +82,7 @@
         float: left;
         margin-bottom: 17px;
         width: 100%;
+        padding: 0% 5%;
         @include box_sizing;
     }
 
@@ -94,7 +95,7 @@
         width: 100%;
     }  
 
-    @include navigation($small, 25px, $logo-small);  
+    @include navigation($small, $logo-small);  
 }
 
 
