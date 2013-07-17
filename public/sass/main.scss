@@ -61,7 +61,7 @@ nav {
     margin-bottom: 0;
     background-color: $white;
     padding: 0px 00px;
-    @include drop_shadow();
+    @include drop-shadow();
 
     ul {
         overflow: auto;
@@ -131,7 +131,7 @@ section {
     
     &.top {
         background: url('../img/hero.jpg') no-repeat center center; 
-        @include background_cover();
+        @include background-size();
         padding-top: 188px;
         text-align: center;
 
@@ -164,7 +164,7 @@ section {
 			width: 100%;
 			@include rounded_corner();
 			@include transition(all, 0.3s, ease);
-			@include box_sizing;
+			@include box-sizing;
 			background-color: $grey-lightest;
 			font-family: $san_serif;
 			font-size: $large;
@@ -179,7 +179,7 @@ section {
 				cursor: pointer;
 				padding: 0;
 				font-size: $medium;
-				@include rounded_corner();
+				@include rounded-corner();
 				@include transition(all, 0.3s, ease);
 				-webkit-appearance: none;
 
@@ -233,7 +233,7 @@ section {
 		}
 
 		img {
-			@include rounded_corner();
+			@include rounded-corner();
 		}
 
 		.social {
