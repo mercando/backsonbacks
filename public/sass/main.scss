@@ -52,22 +52,74 @@ a {
 
 }
 
+nav {
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 0;
+    background-color: $white;
+    padding: 0px 00px;
+    @include drop_shadow();
+
+    ul {
+        overflow: auto;
+        list-style-type: none;
+    }
+
+    li {
+        float: left;
+        margin-right: 0px;
+        padding: 30px 0px;
+        text-align: center;
+        font-family: $serif;
+        @include transition(all, 0.2s, ease);
+
+        @media (min-width: 481px){
+		    font-size: $medium;
+		    width: 20%;
+		}
+
+		@media (max-width: 480px){
+		    font-size: $small;
+		    width: 25%;
+		}
+        
+        a {
+            text-decoration: none;
+            color: $grey;
+            @include transition();
+
+            &:hover {
+                color: $grey;
+                text-decoration: underline;
+            }
+
+        }
+        
+        &.active {
+            font-weight: 800;
+            text-decoration: underline;
+            
+        }
+
+        &.logo {
+            text-align: center;
+            font-family: $pickle-font;
+            font-size: $logo;
+            color: $green;
+            
+            @media (max-width: 480px){
+		    display: none;
+			}	
+        }
+    }
+}
+
 footer {
 	padding: 80px 30px;
 	text-align: center;
-	
-	a {
-		text-align: center;
-		font-family: $pickle-font;
-		font-size: $logo;
-		color: $grey-light;
-		text-decoration: none;
-		@include transition();
-		
-		&:hover {
-			color: $grey-lighter;
-		}
-	}
 
 	.copyright {
 		color: $grey-lighter;
@@ -83,7 +135,7 @@ section {
         padding-top: 188px;
         text-align: center;
 
-        object {
+        img {
         	max-width: 700px;
         }
         
@@ -103,6 +155,45 @@ section {
 		p {
 			color: $green-darker;
 		}
+
+		input {
+			padding: 17px 20px;
+			border: 0px solid $white;
+			color: #333;
+			margin: 20px 0px;
+			width: 100%;
+			@include rounded_corner();
+			@include transition(all, 0.3s, ease);
+			@include box_sizing;
+			background-color: $grey-lightest;
+			font-family: $san_serif;
+			font-size: $large;
+
+			&.btn {
+				color: $white;
+				background-color: $green-dark;
+				width: 160px;
+				height: 65px;
+				border: none;
+				margin: 0px 0px;
+				cursor: pointer;
+				padding: 0;
+				font-size: $medium;
+				@include rounded_corner();
+				@include transition(all, 0.3s, ease);
+				-webkit-appearance: none;
+
+				&:hover {
+					background-color: $green-darker;
+				}
+			}
+
+			&:focus {
+				outline: none;
+				background-color: $white;
+			}
+		}
+
 	}
 	
 	&.about {
@@ -121,50 +212,38 @@ section {
 	&.connect {
 		background-color: $grey-lightest;
 
+		a {
+			text-align: center;
+			font-family: $pickle-font;
+			color: $grey-light;
+			text-decoration: none;
+			@include transition();
+
+			@media (min-width: 481px){
+			    font-size: $footer-big;
+			}
+
+			@media (max-width: 480px){
+			    font-size: $footer-small;
+			}	
+			
+			&:hover {
+				color: $grey-lighter;
+			}
+		}
+
+		img {
+			@include rounded_corner();
+		}
+
+		.social {
+			padding: 20px 0px;
+			word-spacing: 10px;
+		}
+
 		
 	}
 }
-
-input {
-	padding: 17px 20px;
-	border: 0px solid $white;
-	color: #333;
-	margin: 20px 0px;
-	width: 100%;
-	@include rounded_corner();
-	@include transition(all, 0.3s, ease);
-	@include box_sizing;
-	background-color: $grey-lightest;
-	font-family: $san_serif;
-	font-size: $large;
-
-	&.btn {
-		color: $white;
-		background-color: $green-dark;
-		width: 160px;
-		height: 65px;
-		border: none;
-		margin: 0px 0px;
-		cursor: pointer;
-		padding: 0;
-		font-size: $medium;
-		@include rounded_corner();
-		@include transition(all, 0.3s, ease);
-		-webkit-appearance: none;
-
-		&:hover {
-			background-color: $green-darker;
-		}
-	}
-
-	&:focus {
-		outline: none;
-		background-color: $white;
-	}
-}
-
-
-
 
 #response {
 	margin-left: 15px;

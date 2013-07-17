@@ -21,7 +21,7 @@
         float: left;
         margin-bottom: 17px;
         @include box_sizing;
-        padding-left: 2%;
+        padding: 0% 2%;
     }
 
     .span1 {
@@ -48,14 +48,11 @@
         float: left;
         margin-bottom: 17px;
     }
-    object {
+    img {
         width: 100%;
     }
 
-    @include navigation();  
 }
-
-
 
 @media (max-width: 768px){
   /*
@@ -91,11 +88,10 @@
         margin-bottom: 17px;
     }
 
-    object {
+    img {
         width: 100%;
     }  
 
-    @include navigation($small, $logo-small);  
 }
 
 

@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
   <title>Backs On Backs</title>
@@ -27,11 +27,7 @@
     <div class="container">
       
       <div class="span4">
-        <object data="public/img/logo_2.svg" type="image/svg+xml" class="logo">
-          <!--[if lte IE 8 ]-->
-            <img src="public/img/logo_2.png">
-          <!--![endif]-->
-        </object>  
+          <img src="public/img/logo_2.png" alt="Backs On Backs">
       </div>
       
       <div class="span4">
@@ -50,11 +46,7 @@
       <div class="row">
     
         <div class="span2">
-          <object data="public/img/veggies.svg" type="image/svg+xml" class="logo">
-            <!--[if lte IE 8 ]-->
-              <img src="public/img/veggies.png">
-            <!--![endif]-->
-          </object>
+            <img src="public/img/veggies.png" alt="Veggies">
         </div>
     
         <div class="span2">
@@ -68,11 +60,7 @@
       <div class="row">
     
         <div class="span2">
-          <object data="public/img/shots.svg" type="image/svg+xml" class="logo">
-            <!--[if lte IE 8 ]-->
-              <img src="public/img/shots.png">
-            <!--![endif]-->
-          </object>
+            <img src="public/img/shots.png" alt="Shots">
         </div>
     
         <div class="span2">
@@ -90,11 +78,7 @@
     <div class="container">
     
       <div class="span2">
-        <object data="public/img/store.svg" type="image/svg+xml" class="logo">
-            <!--[if lte IE 8 ]-->
-              <img src="public/img/store.png">
-            <!--![endif]-->
-          </object>
+          <img src="public/img/store.png" alt="Store">
       </div>
     
       <div class="span2">
@@ -110,9 +94,7 @@
               <? require_once('public/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
             </span>
           </fieldset>
-        </form>      
-        <script type="text/javascript" src="public/js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="public/js/mailing-list.js"></script>
+        </form>     
       </div>
     
     </div>
@@ -129,33 +111,21 @@
       </div>
       
       <div class="span5">
-        <object data="public/img/avatar-01.svg" type="image/svg+xml" class="avatar">
-            <!--[if lte IE 8 ]-->
-              <img src="public/img/avatar-01.png">
-            <!--![endif]-->
-          </object>
+        <img src="public/img/avatar-01.png" alt="Avatar">
         <h2>Eric Ma</h2>
         <p class="user_info">Co-Founder</p>
         <p class="user_info"><a href="#">@erma</a></p>
       </div>
       
       <div class="span5">
-        <object data="public/img/avatar-02.svg" type="image/svg+xml" class="avatar">
-            <!--[if lte IE 8 ]-->
-              <img src="public/img/avatar-02.png">
-            <!--![endif]-->
-          </object>
+        <img src="public/img/avatar-02.png" alt="Avatar">
         <h2>Andrew Mercando</h2>
         <p class="user_info">Co-Founder</p>
         <p class="user_info"><a href="#">@merc</a></p>
       </div>
       
       <div class="span5">
-        <object data="public/img/avatar-03.svg" type="image/svg+xml" class="avatar">
-          <!--[if lte IE 8 ]-->
-            <img src="public/img/avatar-03.png">
-          <!--![endif]-->
-        </object>
+        <img src="public/img/avatar-03.png" alt="Avatar">
         <h2>Abigail Besdin</h2>
         <p class="user_info">Co-Founder</p>
         <p class="user_info"><a href="#">@abigailbesdin</a></p>
@@ -167,10 +137,16 @@
   <section class="connect">
     <div class="container">
       
-      <div class="span4"><h1>Connect</h1></div>
-      
       <div class="span2">
-        <iframe src="http://snapwidget.com/sl/?u=YmFja3NvbmJhY2tzfGlufDUwMHwyfDN8fHllc3w1fG5vbmU=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; height: 515px" ></iframe>
+        <h1>Connect</h1>
+        <p>
+          Bacon ipsum dolor sit amet turducken sausage pork loin kielbasa swine. Prosciutto cow spare ribs tri-tip. Bacon t-bone meatball, cow beef brisket salami. Strip steak bresaola biltong cow fatback meatball andouille frankfurter sausage tongue. Pork pork belly venison, shoulder short loin meatball ham hock. Brisket ham ham hock, capicola drumstick shoulder shank pork chop.
+        </p>
+        <p class="social"><a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a></p>
+      </div>
+
+      <div class="span2">
+          <img src="public/img/stamp.png" alt="Stamp">
       </div>
     
     </div>
@@ -180,61 +156,15 @@
   <footer>
     <div class="container">
       
-      <div class="span4 social"><a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a></div>
-      
       <div class="span4 copyright">&copy; Backs On Backs 2013</div>
     
     </div>
   </footer>
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
 
-      // Define nav and variable needed 
-      var lastId,
-          nav = $("nav"),
-          navHeight = nav.outerHeight(),
-          navItems = nav.find("a"),
-          sections = navItems.map(function(){
-            var item = $(this).attr("id");
-            if (item.length) { return item; }
-          });
-      
-      // Scroll user to section when navigation is clicked
-      $(navItems).click(function(){
-        var sectionName = $(this).attr("id")
-            destination = $("section." + sectionName).offset().top;
-        $("html,body").animate({
-          scrollTop: destination - navHeight + 1
-        }, 500);
-        return false;        
-      });
+  <script type="text/javascript" src="public/js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="public/js/mailing-list.js"></script>
+  <script type="text/javascript" src="public/js/main.js"></script>
 
-      // Monitor the current scroll position + execute on change.
-      $(window).scroll(function(){
-        var scrollPosition = $(this).scrollTop() + navHeight;
-
-        //Calculate which section the user is currently in.
-        var currentSection = sections.map(function(){
-          var current = $("section." + this),
-              currentTop = $(current).offset().top,
-              currentBottom = $(current).offset().top + $(current).outerHeight();
-          if (currentTop < scrollPosition && currentBottom > scrollPosition)
-            return this;         
-        });
-
-        var id = currentSection[currentSection.length - 1];
-
-        //If the section changes, update the navigation.
-        if (lastId !== id) {
-          lastId = id;
-          navItems.parent().removeClass("active");
-          navItems.filter("[id = " + lastId + "]").parent().addClass("active")
-        }
-      });
-    });
-
-  </script>
 </body>
 
 <div id="fb-root"></div>
